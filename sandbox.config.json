@@ -1,0 +1,12 @@
+{
+  "infiniteLoopProtection": true,
+  "hardReloadOnChange": false,
+  "view": "browser",
+  "node": "14",
+  "container": {
+    "node": "14",
+    "port": 8080
+  },
+  "template": "next",
+  "environment": "create-react-app"
+}

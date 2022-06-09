@@ -1,0 +1,17 @@
+{
+  "name": "overreact-and-dart-2134",
+  "description": "OverReact running on Dart 2.13.4",
+  "license": "MIT",
+  "main": "web/main.dart",
+  "scripts": {
+    "preinstall": "bash ./scripts/install_dart.sh",
+    "prestart": "yarn run preinstall",
+    "start": "concurrently 'bash ./scripts/build_dart.sh' 'cd /dart-build/web/ && live-server --port=8080'"
+  },
+  "keywords": [],
+  "dependencies": {
+    "concurrently": "6.3.0",
+    "live-server": "1.2.1",
+    "react": "18.1.0"
+  }
+}

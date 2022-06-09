@@ -1,2 +1,1 @@
-# codesandbox-overreact
-The base files to run a codesandbox container.
+An absolute bare-bones web app.
