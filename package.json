@@ -4,9 +4,7 @@
   "license": "MIT",
   "main": "web/main.dart",
   "scripts": {
-    "preinstall": "bash ./scripts/install_dart.sh",
-    "prestart": "yarn run preinstall",
-    "start": "concurrently 'bash ./scripts/build_dart.sh' 'cd /dart-build/web/ && live-server --port=8080'"
+    "start": "zsh ./scripts/build_dart.sh"
   },
   "keywords": [],
   "dependencies": {

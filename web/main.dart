@@ -14,13 +14,16 @@ mixin BasicProps on UiProps {}
 
 UiFactory<BasicProps> Basic = uiFunction(
   (props) {
+    final toggleGreeting = useState(true);
     final consumedProps = props.staticMeta.forMixins({BasicProps});
     final classes = ClassNameBuilder.fromProps(props)..add('basic-component');
-    return (Dom.div()
+    return (Dom.button()
       ..className = classes.toClassName()
       ..addUnconsumedDomProps(props, consumedProps)
+      ..onClick = ((_) => toggleGreeting.set(!toggleGreeting.value))
     )(
-      'Goodbye, ', 
+      toggleGreeting.value ? 'Hello' : 'Goodbye',
+      ', ', 
       props.children,
     );
   },
